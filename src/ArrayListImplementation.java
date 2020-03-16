@@ -58,7 +58,9 @@ public class ArrayListImplementation<E> implements Serializable, Cloneable, Iter
 
     @Override
     public E get(int index) {
+        if(index < size())
         return values[index];
+        throw new IndexOutOfBoundsException();
     }
 
     @Override
